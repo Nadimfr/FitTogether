@@ -1,0 +1,115 @@
+.home {
+  margin: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section1 {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    .bubbles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 5s infinite;
+      .bubble1 {
+        position: relative;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: palevioletred;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        img {
+          width: 50px;
+        }
+      }
+      .bubble2 {
+        width: 70px;
+        margin-bottom: 20px;
+        position: relative;
+        left: 30px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 50px;
+        }
+      }
+      .bubble3 {
+        width: 70px;
+        margin-bottom: 20px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 50px;
+        }
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    .banner {
+      .title {
+        line-height: 80px;
+        font-size: 80px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .subtitle {
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .left {
+      width: 15%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .section2 {
+    font-weight: 700;
+    border: 3px solid white;
+    background-color: white;
+    margin: -10px 0;
+    padding: 15px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+  }
+
+  .section2:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 3px solid rgba(355, 355, 355, 0.4);
+  }
+}

@@ -1,0 +1,44 @@
+.Header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  .left {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    li {
+      font-weight: 500;
+      list-style: none;
+      color: white;
+    }
+
+    li:hover {
+      text-decoration: underline;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+  .right {
+    border: 3px solid white;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: white;
+    padding: 15px 30px;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .right:hover {
+    border: 3px solid #54b3d6;
+    box-shadow: inset 100px 0 30px 100px #54b3d6;
+    color: white;
+  }
+}

@@ -6,7 +6,7 @@
   .section1 {
     font-weight: 600;
     color: white;
-    background-color: blue;
+    background-color: #124e78;
     padding: 30px;
     display: flex;
     width: 100%;
@@ -24,13 +24,18 @@
       display: flex;
       gap: 10px;
     }
+
+    .social-medias:hover {
+      cursor: pointer;
+      color: #fffacc;
+    }
   }
 
   .section2 {
     width: 100%;
     padding: 20px 0;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #124e78;
     text-align: center;
   }
 }

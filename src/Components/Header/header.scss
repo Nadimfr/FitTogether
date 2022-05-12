@@ -29,7 +29,7 @@
     border-radius: 10px;
     font-weight: 700;
     letter-spacing: 3px;
-    box-shadow: inset 0 0 0 0 #54b3d6;
+    box-shadow: inset 0 0 0 0 #4a7b9d;
     color: white;
     padding: 15px 30px;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -37,8 +37,9 @@
   }
 
   .right:hover {
-    border: 3px solid #54b3d6;
-    box-shadow: inset 100px 0 30px 100px #54b3d6;
+    border: 3px solid #4a7b9d;
+    background-color: #4a7b9d;
+    box-shadow: inset 100px 0 30px 100px #4a7b9d;
     color: white;
   }
 }

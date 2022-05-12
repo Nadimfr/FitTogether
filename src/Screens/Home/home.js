@@ -3,7 +3,8 @@ import "../Home/home.scss";
 import Gym1 from "../../Assets/Images/gym1.png";
 import Gym2 from "../../Assets/Images/gym2.png";
 import Gym3 from "../../Assets/Images/gym3.png";
-import Left from "../../Assets/Images/left.png";
+import { Link } from "react-router-dom";
+import Pricing from "../../Components/Pricing/pricing";
 
 const home = () => {
   return (
@@ -41,8 +42,11 @@ const home = () => {
           </div>
         </div>
       </div>
+      <Link to="/quiz">
+        <div className="section2">Take your quiz</div>
+      </Link>
 
-      <div className="section2">Take your quiz</div>
+      <Pricing />
     </div>
   );
 };

@@ -1,14 +1,13 @@
 .App {
-  .header {
-    height: 500px;
-    padding: 3% 5%;
-    // background-image: url(./Assets/Images/back.jpg);
+  z-index: 0;
+  height: 500px;
+  padding: 3% 5%;
+  // background-image: url(./Assets/Images/back.jpg);
 
-    background-image: linear-gradient(
-      to top,
-      rgba(255, 0, 0, 0),
-      #124e78,
-      rgba(0, 0, 100, 1)
-    );
-  }
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0),
+    #124e78,
+    rgba(0, 0, 100, 1)
+  );
 }

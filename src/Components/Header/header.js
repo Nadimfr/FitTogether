@@ -5,7 +5,9 @@ import "../Header/header.scss";
 const header = () => {
   return (
     <div className="Header">
-      <div className="left">Fit Together</div>
+      <Link to="/">
+        <div className="left">Fit Together</div>
+      </Link>
       <div className="menu">
         <Link to="/quiz">
           <li>Take your quiz</li>
@@ -15,9 +17,14 @@ const header = () => {
           <li>Store</li>
         </Link>
         <li>About Us</li>
-        <li>Blog</li>
+        <Link to="/faq">
+          <li>FAQ</li>
+        </Link>
       </div>
-      <div className="right">Sign Up</div>
+
+      <Link to="/login">
+        <div className="right">Sign Up</div>
+      </Link>
     </div>
   );
 };

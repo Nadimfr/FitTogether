@@ -13,13 +13,13 @@
     justify-content: space-between;
     gap: 50px;
     li {
-      font-weight: 500;
+      font-weight: 700;
       list-style: none;
       color: white;
     }
 
     li:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid white;
       font-weight: 700;
       cursor: pointer;
     }

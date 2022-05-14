@@ -1,5 +1,6 @@
 import Home from "../src/Screens/Home/home";
 import Quiz from "./Screens/Quiz/quiz";
+import Shop from "./Screens/Shop/shop";
 
 export const normalRoutes = [
   {
@@ -12,6 +13,12 @@ export const normalRoutes = [
     exact: false,
     path: "/quiz",
     component: <Quiz />,
+    header: false,
+  },
+  {
+    exact: false,
+    path: "/store",
+    component: <Shop />,
     header: false,
   },
 ];

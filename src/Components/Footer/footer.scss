@@ -1,9 +1,8 @@
 .footer {
   overflow-x: hidden !important;
   width: 100% !important;
-  margin-top: 600px;
   position: relative;
-  bottom: 0;
+  bottom: 0 !important;
   .section1 {
     font-weight: 600;
     color: white;
@@ -17,18 +16,28 @@
     text-transform: uppercase;
 
     .title {
+      cursor: pointer;
       font-size: 20px;
       font-weight: 700;
     }
 
     .social-medias {
       display: flex;
+      align-items: center;
       gap: 10px;
     }
 
     .social-medias:hover {
       cursor: pointer;
       color: #fffacc;
+    }
+
+    .app {
+      color: white;
+    }
+
+    .touch {
+      color: white;
     }
   }
 

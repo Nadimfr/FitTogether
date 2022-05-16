@@ -42,7 +42,7 @@ const home = () => {
           </div>
         </div>
       </div>
-      <Link to="/quiz">
+      <Link to="/quiz" style={{ textDecoration: "none" }}>
         <div className="section2">Take your quiz</div>
       </Link>
 

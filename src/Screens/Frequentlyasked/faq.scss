@@ -10,7 +10,6 @@
   .header {
     height: 150px;
     padding: 3% 5%;
-    background-image: linear-gradient(to top, white, #124e78);
 
     h1 {
       color: white;
@@ -22,7 +21,7 @@
 
   .accordion {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     .item {
       background-color: #124e78;
       border-radius: 20px;
@@ -31,5 +30,17 @@
         font-size: 20px;
       }
     }
+  }
+
+  .ask {
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ask:hover {
+    color: #703d57;
+    cursor: pointer;
   }
 }

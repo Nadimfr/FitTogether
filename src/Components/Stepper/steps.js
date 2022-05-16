@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import { Checkbox, FormControlLabel } from "@mui/material";
+import Bmi from "../BMI/bmi";
 import Fat from "../../Assets/Images/fat.png";
 
 const steps = [
@@ -73,25 +74,7 @@ const steps = [
   },
   {
     label: "",
-    description: (
-      <div className="box2">
-        <div className="row2">
-          <InputLabel required className="InputLabel">
-            Height
-          </InputLabel>
-          <Input className="input" />
-          <InputLabel required className="InputLabel">
-            Weight
-          </InputLabel>
-          <Input className="input" />
-          <InputLabel required className="InputLabel">
-            Wanted Weight
-          </InputLabel>
-          <Input className="input" />
-        </div>
-        <img src={Fat} />
-      </div>
-    ),
+    description: <Bmi />,
   },
   {
     label: "",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Frequentlyasked/faq.scss";
 import {
   Accordion,
@@ -7,14 +7,25 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import ContactUs from "../../Components/ContactUs/contactus";
+import CustomPopup from "../../Components/Popup/CustomPopup";
 
 const Faq = () => {
+  const [visibility, setVisibility] = useState(false);
+
+  const popupCloseHandler = (e) => {
+    setVisibility(e);
+  };
   return (
     <>
       <div className="Faq">
         <div className="header">
           <h1>Frequently Asked Questions</h1>
         </div>
+
+        <CustomPopup onClose={popupCloseHandler} show={visibility}>
+          <ContactUs />
+        </CustomPopup>
         <Accordion className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
@@ -27,20 +38,6 @@ const Faq = () => {
                 Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat
                 occaecat ut occaecat consequat est minim minim esse tempor
                 laborum consequat esse adipisicing eu reprehenderit enim.
-              </p>
-            </AccordionItemPanel>
-          </AccordionItem>
-          <AccordionItem>
-            <AccordionItemHeading>
-              <AccordionItemButton>
-                Is free will real or just an illusion?
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <p>
-                In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-                nostrud velit in irure cillum tempor laboris sed adipisicing eu
-                esse duis nulla non.
               </p>
             </AccordionItemPanel>
           </AccordionItem>
@@ -60,20 +57,6 @@ const Faq = () => {
               </p>
             </AccordionItemPanel>
           </AccordionItem>
-          <AccordionItem>
-            <AccordionItemHeading>
-              <AccordionItemButton>
-                Is free will real or just an illusion?
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <p>
-                In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-                nostrud velit in irure cillum tempor laboris sed adipisicing eu
-                esse duis nulla non.
-              </p>
-            </AccordionItemPanel>
-          </AccordionItem>
         </Accordion>
         <Accordion className="accordion">
           <AccordionItem className="item">
@@ -90,21 +73,11 @@ const Faq = () => {
               </p>
             </AccordionItemPanel>
           </AccordionItem>
-          <AccordionItem>
-            <AccordionItemHeading>
-              <AccordionItemButton>
-                Is free will real or just an illusion?
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <p>
-                In ad velit in ex nostrud dolore cupidatat consectetur ea in ut
-                nostrud velit in irure cillum tempor laboris sed adipisicing eu
-                esse duis nulla non.
-              </p>
-            </AccordionItemPanel>
-          </AccordionItem>
         </Accordion>
+
+        <div className="ask" onClick={(e) => setVisibility(!visibility)}>
+          Ask your question now
+        </div>
       </div>
     </>
   );

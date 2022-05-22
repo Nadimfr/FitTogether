@@ -43,9 +43,9 @@ const Product = () => {
         <div className="left">
           <img className="product-image" src={each.image} />
           <div className="others">
-            <img className="image" src={Dumbells} />
-            <img className="image" src={Dumbells} />
-            <img className="image" src={Dumbells} />
+            <img className="image" src={each.image} />
+            <img className="image" src={each.image} />
+            <img className="image" src={each.image} />
           </div>
         </div>
         <div className="separator"></div>

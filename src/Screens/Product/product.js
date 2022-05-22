@@ -4,6 +4,7 @@ import { TextField } from "@mui/material";
 import Dumbells from "../../Assets/Images/Dumbells.png";
 import Drink from "../../Assets/Images/drink.png";
 import Package from "../../Assets/Images/package.jpg";
+import { TailSpin } from "react-loader-spinner";
 import CustomPopup from "../../Components/Popup/CustomPopup";
 import * as ProductsApi from "../../Core/apis/products";
 import { Link } from "react-router-dom";
@@ -34,7 +35,7 @@ const Product = () => {
   if (isLoading) {
     return (
       <div className="tailSpin">
-        {/* <TailSpin height="60" width="60" color="#4ba4f0" ariaLabel="loading" /> */}
+        <TailSpin height="60" width="60" color="#4ba4f0" ariaLabel="loading" />
       </div>
     );
   } else {

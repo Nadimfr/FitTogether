@@ -28,7 +28,7 @@ export const normalRoutes = [
   },
   {
     exact: false,
-    path: "/product-details",
+    path: "/product-details/:id",
     component: <Product />,
     header: false,
   },

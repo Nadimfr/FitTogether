@@ -19,8 +19,8 @@ const Shop = () => {
     ProductsApi.getAllProducts().then((res) => {
       setProducts(res);
       console.log(res);
-    }, []);
-  });
+    });
+  }, []);
 
   return (
     <div className="store">
@@ -37,14 +37,17 @@ const Shop = () => {
             outsideChevron
             chevronWidth={chevronWidth}
           >
-            {/* <Link to="/product-details" style={{ textDecoration: "none" }}> */}
-            {/* </Link> */}
             {products.map((product) => (
-              <div className="card">
-                <img className="product-image" src={product.image} />
-                <div className="product-title">{product.name}</div>
-                <div className="product-price">{product.price} $</div>
-              </div>
+              <Link
+                to={`/product-details/${product._id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="card">
+                  <img className="product-image" src={product.image} />
+                  <div className="product-title">{product.name}</div>
+                  <div className="product-price">{product.price} $</div>
+                </div>
+              </Link>
             ))}
           </ItemsCarousel>
         </div>

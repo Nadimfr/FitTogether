@@ -1,53 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import * as PlansApi from "../../Core/apis/plans";
 import "../Pricing/pricing.scss";
 
-const pricing = () => {
+const Pricing = () => {
+  useEffect(() => {
+    PlansApi.getAllPlans()
+      .then((res) => {
+        setPlans(res);
+        console.log(res);
+      }, [])
+      .finally(() => {
+        setLoading(!isLoading);
+      });
+  }, []);
+
+  const [isLoading, setLoading] = useState(true);
+  const [plans, setPlans] = useState([]);
+
   return (
     <>
       <div className="Pricing">Pricing</div>
       <div className="cards">
-        <div className="card">
-          <div className="plan">1-month plan</div>
-          <div className="price">USD$ 19.99</div>
-          <div className="list">
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-          </div>
+        {plans.map((plan) => (
+          <div className="card">
+            <div className="plan">{plan.name}</div>
+            <div className="price">USD$ {plan.price}</div>
+            <div className="list">
+              {plan.content.map((x, i) => (
+                <li>{x}</li>
+              ))}
+            </div>
 
-          <div className="subscribe">Subscribe</div>
-        </div>
-        <div className="card">
-          <div className="plan">3-month plan</div>
-          <div className="price">USD$ 39.99</div>
-          <div className="list">
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
+            <div className="subscribe">Subscribe</div>
           </div>
-
-          <div className="subscribe">Subscribe</div>
-        </div>
-        <div className="card">
-          <div className="plan">6-month plan</div>
-          <div className="price">USD$ 49.99</div>
-          <div className="list">
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-            <li>OK</li>
-          </div>
-
-          <div className="subscribe">Subscribe</div>
-        </div>
+        ))}
       </div>
     </>
   );
 };
 
-export default pricing;
+export default Pricing;

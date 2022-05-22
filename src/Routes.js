@@ -6,6 +6,7 @@ import Product from "./Screens/Product/product";
 import Cart from "./Screens/Cart/cart";
 import Faq from "./Screens/Frequentlyasked/faq";
 import Contactus from "./Components/ContactUs/contactus";
+import EditProfile from "./Screens/UserProfile/profile";
 
 export const normalRoutes = [
   {
@@ -54,6 +55,12 @@ export const normalRoutes = [
     exact: false,
     path: "/login",
     component: <Login />,
+    header: false,
+  },
+  {
+    exact: false,
+    path: "/edit-profile",
+    component: <EditProfile />,
     header: false,
   },
 ];

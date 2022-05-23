@@ -6,6 +6,7 @@ import Drink from "../../Assets/Images/drink.png";
 import Package from "../../Assets/Images/package.jpg";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import * as ProductsApi from "../../Core/apis/products";
+import Countdown from "react-countdown";
 import { Link } from "react-router-dom";
 
 const Shop = () => {
@@ -105,7 +106,10 @@ const Shop = () => {
       </div>
       <div className="sec1">
         <div className="title">
-          Packages <span>( Ends in 23:43:21 hours )</span>
+          Packages{" "}
+          <span>
+            (<Countdown date={Date.now() + 570070000} />)
+          </span>
         </div>
         <div>
           <ItemsCarousel

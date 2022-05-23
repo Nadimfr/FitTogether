@@ -17,6 +17,7 @@
     "react-accessible-accordion": "^5.0.0",
     "react-bootstrap": "^2.3.1",
     "react-bootstrap-form": "^0.1.4-beta6",
+    "react-countdown": "^2.3.2",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-items-carousel": "^2.8.0",

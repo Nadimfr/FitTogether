@@ -3,6 +3,13 @@ import "../UserProfile/profile.scss";
 
 const Profile = () => {
   const [edit, setEdit] = useState(false);
+  const [textColor, setTextColor] = useState("#124e78");
+
+  const changeColor = () => {
+    setEdit(true);
+    setTextColor("#703d57");
+  };
+
   return (
     <>
       <div className="profile">

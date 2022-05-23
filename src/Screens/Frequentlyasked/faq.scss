@@ -44,3 +44,25 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .Faq {
+    .header {
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    .accordion {
+      .item {
+        .button {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .ask {
+      font-size: 18px;
+    }
+  }
+}

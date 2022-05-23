@@ -21,7 +21,7 @@ const Login = () => {
                 </h2>
               </div>
               {login ? (
-                <div style={{ marginTop: "50px" }}>
+                <div className="top">
                   <input
                     type="text"
                     class="field"
@@ -34,7 +34,7 @@ const Login = () => {
                 <div></div>
               )}
               {register ? (
-                <div style={{ marginTop: "50px" }}>
+                <div className="top">
                   <input type="text" class="field" placeholder="Fullname" />
                   <input type="text" class="field" placeholder="age" />
                   <button class="btn">Sign Up</button>
@@ -42,12 +42,6 @@ const Login = () => {
               ) : (
                 <div></div>
               )}
-              {/* <h1 class="text1">
-                Not a member yet?
-                <h3 class="text2" href="_blank">
-                  Sign up now
-                </h3>
-              </h1> */}
             </div>
           </div>
         </div>

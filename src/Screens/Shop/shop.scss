@@ -49,3 +49,23 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .store {
+    overflow: hidden;
+    .sec1 {
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: white;
+        height: 250px;
+        width: 85%;
+      }
+    }
+  }
+}

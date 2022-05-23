@@ -111,3 +111,43 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .Contact_us {
+    .container {
+      .contact-box {
+        max-width: 350px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 5px 25px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+      }
+      .left {
+        display: none;
+      }
+      .right {
+        padding: 25px 15px;
+        width: 100%;
+        align-items: center;
+        h2 {
+          position: relative;
+          padding: 0 0 10px;
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+
+        .field {
+          width: 75%;
+          font-size: 1rem;
+        }
+
+        .btn {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

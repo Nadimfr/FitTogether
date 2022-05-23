@@ -113,3 +113,63 @@
     border: 3px solid rgba(355, 355, 355, 0.4);
   }
 }
+
+@media screen and (max-width: 450px) {
+  .home {
+    .section1 {
+      .bubbles {
+        display: none;
+
+        .bubble1 {
+          display: none;
+          img {
+            display: none;
+          }
+        }
+        .bubble2 {
+          display: none;
+          img {
+            display: none;
+          }
+        }
+        .bubble3 {
+          display: none;
+          img {
+            display: none;
+          }
+        }
+      }
+
+      .banner {
+        .title {
+          line-height: 40px;
+          font-size: 35px;
+          margin-top: 40px;
+        }
+
+        .subtitle {
+          color: white;
+          text-align: center;
+        }
+      }
+
+      .left {
+        width: 15%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .section2 {
+      margin-top: 20px;
+    }
+
+    .section2:hover {
+      cursor: pointer;
+      color: white;
+      background-color: #703d57;
+      border: 3px solid rgba(355, 355, 355, 0.4);
+    }
+  }
+}

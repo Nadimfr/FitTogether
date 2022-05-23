@@ -31,7 +31,7 @@ const Shop = () => {
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
-            numberOfCards={4}
+            numberOfCards={window.innerWidth > "700px" ? 4 : 1}
             gutter={20}
             leftChevron={<AiOutlineLeft size={30} color="white" />}
             rightChevron={<AiOutlineRight size={30} color="white" />}
@@ -59,7 +59,7 @@ const Shop = () => {
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex1}
             activeItemIndex={activeItemIndex1}
-            numberOfCards={4}
+            numberOfCards={window.innerWidth > "700px" ? 4 : 1}
             gutter={20}
             leftChevron={<AiOutlineLeft size={30} color="white" />}
             rightChevron={<AiOutlineRight size={30} color="white" />}
@@ -115,7 +115,7 @@ const Shop = () => {
           <ItemsCarousel
             requestToChangeActive={setActiveItemIndex2}
             activeItemIndex={activeItemIndex2}
-            numberOfCards={4}
+            numberOfCards={window.innerWidth > "700px" ? 4 : 1}
             gutter={20}
             leftChevron={<AiOutlineLeft size={30} color="white" />}
             rightChevron={<AiOutlineRight size={30} color="white" />}

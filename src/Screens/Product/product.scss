@@ -87,11 +87,12 @@
       .label {
         font-weight: 500;
         font-size: 20px;
+        color: white;
       }
 
       .input {
         width: 40%;
-        border: 1px solid black;
+        border: 1px solid white;
         border-radius: 10px;
       }
 
@@ -101,10 +102,8 @@
     }
 
     .process {
-      margin-top: 30px;
       display: flex;
-      align-items: center;
-      gap: 50px;
+      flex-direction: column;
       .buy {
         background-color: #703d57;
         border: 2px solid #703d57;
@@ -212,6 +211,182 @@
       .continue:hover {
         cursor: pointer;
         border: 2px solid white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .product-page {
+    overflow: hidden;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+
+      .product-image {
+        background-color: white;
+        padding: 15px;
+        border: 2px solid #703d57;
+        border-radius: 10px;
+        width: 75%;
+      }
+
+      .others {
+        display: none;
+        .image {
+          width: 10%;
+          background-color: white;
+          padding: 15px;
+          border: 2px solid #703d57;
+          border-radius: 10px;
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 50px;
+      .product-title {
+        margin-top: 15px;
+        font-size: 25px;
+      }
+
+      .product-price {
+        color: white;
+        font-size: 20px;
+      }
+
+      .quantity {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        .label {
+          font-weight: 500;
+          font-size: 20px;
+          color: white;
+        }
+
+        .input {
+          width: 40%;
+          border: 1px solid white;
+          border-radius: 10px;
+        }
+
+        .input:focus {
+          outline: none;
+        }
+      }
+
+      .process {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        .buy {
+          width: 100%;
+          text-align: center;
+        }
+
+        .add {
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      .similar {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .sim-title {
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+        .sim-prod {
+          display: flex;
+          gap: 20px;
+
+          .sim {
+            border-radius: 5px;
+            background-color: white;
+            height: 100px;
+            width: 100%;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .pop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .p-image {
+        margin-top: 40px;
+        width: 35%;
+      }
+
+      .text {
+        margin-top: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 20px;
+
+        .view {
+          background-color: #703d57;
+          padding: 10px 40px;
+          border-radius: 10px;
+          border: 2px solid #703d57;
+          color: white;
+        }
+
+        .view:hover {
+          cursor: pointer;
+          border: 2px solid white;
+        }
+
+        .continue {
+          border: 2px solid #703d57;
+          background-color: #703d57;
+          padding: 10px 20px;
+          color: white;
+          border-radius: 10px;
+        }
+
+        .continue:hover {
+          cursor: pointer;
+          border: 2px solid white;
+        }
       }
     }
   }

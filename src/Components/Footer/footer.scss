@@ -49,3 +49,57 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .footer {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+    bottom: 0 !important;
+    .section1 {
+      font-weight: 600;
+      color: white;
+      background-color: #124e78;
+      padding: 30px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 150px;
+      text-transform: uppercase;
+
+      .title {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .social-medias {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-medias:hover {
+        cursor: pointer;
+        color: #fffacc;
+      }
+
+      .app {
+        color: white;
+      }
+
+      .touch {
+        color: white;
+      }
+    }
+
+    .section2 {
+      width: 100%;
+      padding: 20px 0;
+      background-color: white;
+      color: #124e78;
+      text-align: center;
+    }
+  }
+}

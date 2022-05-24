@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../ContactUs/contactus.scss";
-import * as Userapi from "../../Core/apis/users";
 
 class Contactus extends Component {
   constructor(props) {
@@ -33,10 +32,6 @@ class Contactus extends Component {
       message: this.state.user?.message,
       state: this.state.user?.state,
     };
-
-    Userapi.sendMail(user).then((res) => {
-      alert(res?.data?.message);
-    });
   }
 
   handleSubmit = (event) => {

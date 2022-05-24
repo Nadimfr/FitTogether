@@ -3,7 +3,6 @@ import "../Footer/footer.scss";
 import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 const footer = () => {
   return (
     <div className="footer">
@@ -20,7 +19,6 @@ const footer = () => {
         >
           Fit Together
         </div>
-
         <a href="https://appstore.com" style={{ textDecoration: "none" }}>
           <div className="app">MOBILE APP</div>
         </a>
@@ -56,5 +54,4 @@ const footer = () => {
     </div>
   );
 };
-
 export default footer;

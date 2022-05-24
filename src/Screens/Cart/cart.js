@@ -8,6 +8,9 @@ import "../Cart/cart.scss";
 
 const Cart = () => {
   const [visibility, setVisibility] = useState(false);
+  const [user, setUser] = useState(
+    sessionStorage.getItem("EMAIL").split("@")[0]
+  );
 
   const popupCloseHandler = (e) => {
     setVisibility(e);
@@ -15,7 +18,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div className="user">Hello (Username),</div>
+      <div className="user">Hello {user},</div>
 
       <div className="cart">
         <div className="left">

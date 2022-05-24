@@ -5,7 +5,7 @@ export const key = "Bearer " + sessionStorage.getItem("SESSION");
 export let api = axios.create({
   baseURL: "http://localhost:8080/api/",
   headers: {
-    "Content-Type": "*/*",
+    "Content-Type": "application/json",
   },
 });
 

@@ -1,7 +1,13 @@
 import { api } from "./main";
 
-export const sendMail = (data) => {
-  return api.post(`tickets/create`, data).then((res) => {
+export const Login = async (data) => {
+  console.log(data);
+  return await api.post("/users/login", data).then((res) => {
+    // console.log(res);
+    if (res.status === 200) {
+      sessionStorage.setItem("SESSION", res.data.token);
+      sessionStorage.setItem("EMAIL", res.data.email);
+    }
     return res;
   });
 };

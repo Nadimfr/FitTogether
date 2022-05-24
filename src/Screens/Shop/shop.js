@@ -12,6 +12,7 @@ const Shop = () => {
   const [drinks, setDrinks] = useState([]);
   const [packages, setPackages] = useState([]);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [items, setItems] = useState(true);
   const [activeItemIndex1, setActiveItemIndex1] = useState(0);
   const [activeItemIndex2, setActiveItemIndex2] = useState(0);
   const chevronWidth = 40;
@@ -95,34 +96,45 @@ const Shop = () => {
         <div className="title">
           Packages{" "}
           <span>
-            (<Countdown date={Date.now() + 570070000} />)
+            (
+            <Countdown
+              date={Date.now() + 10000}
+              onComplete={() => setItems(false)}
+            />
+            )
           </span>
         </div>
-        <div>
-          <ItemsCarousel
-            requestToChangeActive={setActiveItemIndex2}
-            activeItemIndex={activeItemIndex2}
-            numberOfCards={window.innerWidth > 700 ? 4 : 1}
-            gutter={20}
-            leftChevron={<AiOutlineLeft size={30} color="white" />}
-            rightChevron={<AiOutlineRight size={30} color="white" />}
-            outsideChevron
-            chevronWidth={chevronWidth}
-          >
-            {packages.map((product) => (
-              <Link
-                to={`/product-details/${product._id}`}
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <div className="card">
-                  <img className="product-image" src={product.image} />
-                  <div className="product-title">{product.name}</div>
-                  <div className="product-price">{product.price} $</div>
-                </div>
-              </Link>
-            ))}
-          </ItemsCarousel>
-        </div>
+        {items ? (
+          <div>
+            <ItemsCarousel
+              requestToChangeActive={setActiveItemIndex2}
+              activeItemIndex={activeItemIndex2}
+              numberOfCards={window.innerWidth > 700 ? 4 : 1}
+              gutter={20}
+              leftChevron={<AiOutlineLeft size={30} color="white" />}
+              rightChevron={<AiOutlineRight size={30} color="white" />}
+              outsideChevron
+              chevronWidth={chevronWidth}
+            >
+              {packages.map((product) => (
+                <Link
+                  to={`/product-details/${product._id}`}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <div className="card">
+                    <img className="product-image" src={product.image} />
+                    <div className="product-title">{product.name}</div>
+                    <div className="product-price">{product.price} $</div>
+                  </div>
+                </Link>
+              ))}
+            </ItemsCarousel>
+          </div>
+        ) : (
+          <div style={{ fontWeight: 700, fontSize: "20px" }}>
+            No Packages Available !
+          </div>
+        )}
       </div>
     </div>
   );
